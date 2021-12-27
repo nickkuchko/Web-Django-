@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link type="text/css" href="{% static 'app1/css/styles.css' %}" rel="stylesheet" />
+</head>
+<body class="Site">
+<!---------------------------- Header and navigation panel ---------------------------->
+    <header>
+    <div class="topnav">
+        <a class="active" href="{% url 'home' %}">Home</a>
+            {% for m in menu %}
+            <a href="{% url m.url_name %}">{{ m.title }}</a>
+            {% endfor %}
+
+        {% if user.is_authenticated %}
+
+            <div class="authorisation">
+            <a href="{% url 'logout' %}">Logout</a> <a href="#">Welcome, {{user.username}}</a>
+            </div>
+
+        {% else %}
+            <div class="authorisation">
+                <a href="{% url 'register' %}">Sign up</a> <a href="{% url 'login' %}">Log in</a>
+            </div>
+
+        {% endif %}
+
+    </div>
+
+        <h1>About this web</h1>
+        <hr>
+    </header>
+<!---------------------------- Header and navigation panel ---------------------------->
+<!---------------------------- Page content ---------------------------->
+    <main class="Site-content">
+        <div class="about">
+           <p>Hi,
+                <br>I'm glad that you have visited my website and I'm very pleased to welcome you.
+                <br>My name is Nick and this is my first web project Books & Notes which is designed to store books on various
+                branches of IT, astronomy and the history of mankind.
+                <br>The site is currently still in the process of comprehension and will be finalized.
+                <br>Thank you for visiting my site.
+                <br>See you :)
+            </p>
+            <p>If you have any comments, please, connect me clicking "Contact me" button at the top of the page.</p>
+            <p> Yours faithfully, <br> Nick Kuchko </p>
+        </div>
+    </main>
+<!---------------------------- Page content ---------------------------->
+
+<!---------------------------- Footer ---------------------------->
+    <footer>
+        <hr>
+        <p> &copy 2021 &nbsp&nbsp&nbsp&nbsp&nbsp Nick Kuchko</p>
+        <script src="https://yastatic.net/share2/share.js"></script>
+        <div class="ya-share2" data-curtain data-limit="0" data-more-button-type="short" data-popup-direction="top" data-services="facebook,telegram,twitter,viber,whatsapp,linkedin"></div>
+    </footer>
+<!---------------------------- Footer ---------------------------->
+</body>
+</html>

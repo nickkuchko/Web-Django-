@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link type="text/css" href="{% static 'app1/css/styles.css' %}" rel="stylesheet" />
+</head>
+<body class="Site">
+    <header>
+        <div class="topnav">
+            <a class="active" href="{% url 'home' %}">Home</a>
+        </div>
+
+    </header>
+<!---------------------------- Header and navigation panel ---------------------------->
+<!---------------------------- Page content ---------------------------->
+    <main class="Site-content">
+        <h1>Log in page</h1>
+            <p class="registration">
+            If the log in process completes successfully, you will be redirected to the Home page.
+        </p>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <div class="up">
+                {% for field in form %}
+                <p>{{ field.label }}: <br> {{ field }}</p>
+                {% endfor %}
+            </div>
+
+            <p class="submit">
+                <input type="submit" value="Log in">
+            </p>
+        </form>
+            </main>
+<!---------------------------- Page content ---------------------------->
+<!---------------------------- Footer ---------------------------->
+    <footer>
+        <hr>
+        <p> &copy 2021 &nbsp&nbsp&nbsp&nbsp&nbsp Nick Kuchko </p>
+    </footer>
+<!---------------------------- Footer ---------------------------->
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+    <link type="text/css" href="{% static 'app1/css/contact_style.css' %}" rel="stylesheet" />
+</head>
+
+<body class="Site_1">
+    <header>
+		<div class="topnav">
+            <a class="active" href="{% url 'home' %}">Home</a>
+        </div>
+
+		<h2> Contact me </h2>
+		<h4> If you have any questions, suggestions or comments, please, fill the current form below to contact me.
+			I will definitely answer you.</h4>
+
+    </header>
+<!---------------------------- Page content (form) ---------------------------->
+	<main class="Site-content_1">
+		<form method="post">
+		    {% csrf_token %}
+            <div class="H">
+                {% for field in form %}
+                <p>{{ field.label }}:
+                    <br> {{ field }}</p>
+                {% endfor %}
+            </div>
+			<p class="submit">
+				<input type="submit" value="Send" />
+			</p>
+		</form>
+
+		<!-- Message buttons -->
+		<p> Call or type message: </p>
+
+		<div>
+			<a title="Call" href="tel:+375291798795"><img src="{% static 'app1/images/phone.png' %}"></a>
+			<a title="WhatsApp" href="whatsapp://send?phone=+375291798795"><img src="{% static 'app1/images/whatsapp.png' %}"></a>
+<!--			<a title="Viber" href="viber://chat?number=+375291798795"><img src="{% static 'app1/images/viber.png' %}"></a>-->
+<!--			<a title="Viber" href="viber://add?number=375291798795"><img src="{% static 'app1/images/viber.png' %}"></a> &lt;!&ndash; мобильный &ndash;&gt;-->
+			<a title="Telegram" href="tg://resolve?domain=NickKuchko"><img src="{% static 'app1/images/telegram.png' %}"></a>
+		</div>
+		<!-- Message buttons -->
+
+	</main>
+<!---------------------------- Page content (form) ---------------------------->
+
+<!---------------------------- Footer ---------------------------->
+    <footer>
+        <hr>
+        <p> &copy 2021 &nbsp&nbsp&nbsp&nbsp&nbsp Nick Kuchko </p>
+    </footer>
+<!---------------------------- Footer ---------------------------->
+</body>
+
+</html>

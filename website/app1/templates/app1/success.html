@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link type="text/css" href="{% static 'app1/css/styles.css' %}" rel="stylesheet" />
+</head>
+<body class="Site">
+<!---------------------------- Header and navigation panel ---------------------------->
+    <header>
+    <div class="topnav">
+        <a class="active" href="{% url 'home' %}">Home</a>
+            {% for m in menu %}
+            <a href="{% url m.url_name %}">{{ m.title }}</a>
+            {% endfor %}
+            <div class="authorisation">
+                <a href="{% url 'register' %}">Sign up</a>  <a href="{% url 'login' %}">Log in</a>
+        </div>
+    </div>
+
+        <div class="confirmation">
+            Your email has been sent successfully.
+        </div>
+        <hr>
+    </header>
+<!---------------------------- Header and navigation panel ---------------------------->
+<!---------------------------- Page content ---------------------------->
+    <main class="Site-content">
+        <div class="success">
+            <h3>The response will be sent to the email specified in the contact form.
+                <br>Have a good day.
+            </h3>
+        </div>
+    </main>
+<!---------------------------- Page content ---------------------------->
+
+<!---------------------------- Footer ---------------------------->
+    <footer>
+        <hr>
+        <p> &copy 2021 &nbsp&nbsp&nbsp&nbsp&nbsp Nick Kuchko</p>
+    </footer>
+<!---------------------------- Footer ---------------------------->
+</body>
+</html>

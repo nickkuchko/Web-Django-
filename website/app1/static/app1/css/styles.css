@@ -1,0 +1,200 @@
+/* =========================== Body style =========================== */
+
+body {
+    padding: 2px 100px;
+	font-size: 15px;
+}
+
+h1 {
+	margin-bottom: 35px;
+	font-size: 55px;
+	color: #474E69;
+}
+
+h2 {
+	margin-bottom: 100px;
+	color: #474E69;
+}
+
+/* =========================== Navigation menu =========================== */
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #a8a7a7;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #4b7bc8;
+    color: white;
+}
+/*    Search button     */
+.Search {
+    position: absolute;
+    top: 155px;
+    right: 100px;
+    margin-right: 10px;
+}
+
+/*   Sign in, Log in  buttons     */
+.authorisation {
+    float: right;
+    background-color: #4b7bc8;
+}
+
+/* =========================== Main =========================== */
+.Reviews {
+    margin-bottom: 10px;
+	color: #474E69;
+}
+
+.Main1 {
+    text-align: justify;
+}
+
+.author {
+    color: #c85151;
+}
+
+.link-read-post {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* =========================== Posts =========================== */
+
+
+.post-author {
+    font-size: 25px;
+    color: #c85151;
+}
+
+.post-content {
+    text-align: justify;
+    font-size: 18px;
+}
+
+
+/* =========================== News =========================== */
+.date {
+    text-align: right;
+    font-size: 12px;
+}
+
+/* =========================== About =========================== */
+
+.about {
+    font-size: 17px;
+    margin-left: 18px;
+    text-align: justify;
+}
+
+/* =========================== Registration and Log in form =========================== */
+
+.registration {
+	font-size: 25px;
+	color: #474E69;
+	margin-bottom: 29px;
+}
+
+.up {
+    font-family: Times, sans-serif;
+	font-size: 17px;
+    color: #474E69;
+}
+
+input, textarea {
+	padding: 10px;
+	border: 1px solid #E5E5E5;
+	width: 200px;
+	color: #999999;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 8px;
+}
+
+textarea {
+	width: 400px;
+	height: 150px;
+	max-width: 400px;
+	line-height: 18px;
+}
+
+
+/*  Submit Button */
+
+.submit input {
+	width: 100px;
+	height: 40px;
+	background-color: #474E69;
+	color: #FFF;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin-top: 28px;
+    font-family: Times, sans-serif;
+   	font-size: 15px;
+}
+
+/* =========================== Contact form success page =========================== */
+
+.success {
+    font-size: 20px;
+    margin-left: 18px;
+    text-align: justify;
+    font-family: Times, sans-serif;
+    color: #474E69;
+}
+
+.confirmation {
+    font-size: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: Times, sans-serif;
+    color: #474E69;
+}
+
+/* =========================== Footer =========================== */
+
+.Site {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.Site-content {
+    flex: 1;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: double;
+    border-width: 1px;
+}
+
+.ya-share2 {
+    text-align: right;
+    margin-bottom: 25px;
+}
